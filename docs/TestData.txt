@@ -1,0 +1,117 @@
+---- Test data ----
+
+Alice:
+  Stony Brook (01/01/13 - 09/30/13)
+  Skills: Programming, Instructor
+  Does not endorse anyone
+
+Bob:
+  Stony Brook (08/01/13 - 12/31/13)
+  Microsoft (01/01/14 - 12/31/14)
+  Skills: Programming
+  Endorses Alice for Programming and Instructor
+  Endorses Carol for Programming
+
+Carol:
+  IBM (06/01/13 - 12/31/13)
+  No skills claimed
+  Endorses Alice for Programming
+  Endorses Bob for Programming
+
+Dave:
+  IBM (06/01/13 - 07/15/13)
+  Skills: Programming
+  Endorses Carol for Programming
+
+Eve:
+  Google (04/01/12 - 02/01/14)
+  Paypal (01/05/08 - 03/01/12)
+  No skills claimed
+  Does not endorse anyone
+
+Frank:
+  Google (06/01/12 - 01/01/14)
+  EBay   (12/05/06 - 05/20/12)
+  Skills: Programming
+  Endorses Eve for Programming and Quality Assurance
+
+Mallory:
+  Oracle (08/30/08 - 03/30/14)
+  Paypal (01/05/08 - 03/01/12)
+  EBay   (12/05/06 - 12/20/07)
+  Skills: Programming, Basketball
+  Endorses Eve for Programming
+  Endorses Frank for Programming
+  Endorses Mallory for Programming (self-endorsement)
+
+Thor:
+  Asgard (01/01/0000 - 12/31/9999)
+  Skills: Programming, Instructor, and Hammer Wielding
+  Endorses Dave for Programming
+
+
+
+---- Expected query results ----
+
+Q1: Endorsement pairs sharing a common organization on 09/18/2013:
+  Bob endorses Alice
+  Frank endorses Eve
+Q2: Highly qualified endorsements
+  Bob endorses Alice
+  Frank endorses Eve
+Q3: Users endorsed for unclaimed skills
+  Carol
+  Eve
+Q4: Strictly more skilled users
+  Alice is more skilled than Bob
+  Alice is more skilled than Carol
+  Alice is more skilled than Dave
+  Alice is more skilled than Eve
+  Alice is more skilled than Frank
+  Bob is more skilled than Carol
+  Bob is more skilled than Eve
+  Dave is more skilled than Carol
+  Dave is more skilled than Eve
+  Frank is more skilled than Carol
+  Frank is more skilled than Eve
+  Mallory is more skilled than Bob
+  Mallory is more skilled than Carol
+  Mallory is more skilled than Dave
+  Mallory is more skilled than Eve
+  Mallory is more skilled than Frank
+  Thor is more skilled than Alice
+  Thor is more skilled than Bob
+  Thor is more skilled than Carol
+  Thor is more skilled than Dave
+  Thor is more skilled than Eve
+  Thor is more skilled than Frank
+Q5: Strictly more certified users
+  Frank is more certified than Eve
+  Frank is more certified than Carol
+  Dave is more certified than Eve
+  Dave is more certified than Carol
+  Bob is more certified than Eve
+  Bob is more certified than Carol
+  Alice is more certified than Frank
+  Alice is more certified than Eve
+  Alice is more certified than Dave
+  Alice is more certified than Carol
+  Alice is more certified than Bob
+Q6: Indirect endorsements
+  Thor indirectly endorses Carol
+  Thor indirectly endorses Alice
+  Thor indirectly endorses Dave
+  Mallory indirectly endorses Frank
+  Mallory indirectly endorses Eve
+  Frank indirectly endorses Eve
+  Dave indirectly endorses Alice
+  Dave indirectly endorses Carol
+  Carol indirectly endorses Alice
+  Bob indirectly endorses Alice
+Q7: Skill-descending indirect endorsements
+  Dave indirectly endorses Carol
+  Frank indirectly endorses Eve
+  Mallory indirectly endorses Eve
+  Mallory indirectly endorses Frank
+  Thor indirectly endorses Carol
+  Thor indirectly endorses Dave
