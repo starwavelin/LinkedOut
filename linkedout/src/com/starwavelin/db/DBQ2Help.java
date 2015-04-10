@@ -18,11 +18,13 @@ public class DBQ2Help {
 		List<String> l1 = new ArrayList<String>();
 		List<String> l2 = new ArrayList<String>();
 		
-		String sqlStmt = "SELECT SE.from_name"
+		/*String sqlStmt = "SELECT SE.from_name"
 				+ " FROM single_endorse SE"
 				+ " WHERE SE.to_name = ?"
-				+ " AND SE.skill = ?";
-		PreparedStatement checkQ2SQL = conn.prepareStatement(sqlStmt);
+				+ " AND SE.skill = ?";*/
+		PreparedStatement checkQ2SQL = conn.prepareStatement(
+			"SELECT SE.from_name FROM single_endorse SE "
+			+ "WHERE SE.to_name = ? AND SE.skill = ?");
 		checkQ2SQL.setString(1, to);
 		checkQ2SQL.setString(2, skill);
 		
@@ -39,14 +41,13 @@ public class DBQ2Help {
 		
 		for (String s : l1) {
 			if (l2.contains(s)) {
-				conn.close();
 				return true;
 			}
 		}
 		
+		//print out the case where two users being endorsed by the same 3rd user
 		System.out.println(l1.toString() + "    " + l2.toString() + "\n\n");
 		
-		conn.close();
 		return false;
 	}
 }

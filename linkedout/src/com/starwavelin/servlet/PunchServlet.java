@@ -42,12 +42,7 @@ public class PunchServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		if (!(answer == null)) {
-			out.print(answer);
-			return;
-		} else {
-			out.print("we encountered SQL Exceptions! <br />");
-		}
+		out.print(answer);
 	}
 
 	/**

@@ -95,7 +95,7 @@ public class DBDriver {
 					ret.append(rs.getString("from_name") + " endorses " + rs.getString("to_name") + "<br />");
 					counter++;
 				}
-				ret.append("There are " + counter + " records in the results.<br />");
+				ret.append("<br />There are " + counter + " records in the results.<br />");
 				break;
 			case 2:
 				rs = stmt.executeQuery(QUERY_2);
@@ -104,12 +104,13 @@ public class DBDriver {
 					String from = rs.getString("from_name");
 					String to = rs.getString("to_name");
 					String skill = rs.getString("skill");
-					if (DBQ2Help.checkIfBothBeenEndorsedFromSameThirdUser(conn, from, to, skill)) {
+					if (DBQ2Help.checkIfBothBeenEndorsedFromSameThirdUser
+							(conn, from, to, skill)) {
 						ret.append(from + " endorses " + to + "<br />");
+						counter++;
 					}
-					counter++;
 				}
-				ret.append("There are " + counter + " records in the results.<br />");
+				ret.append("<br />There are " + counter + " records in the results.<br />");
 				break;
 			case 3:
 				rs = stmt.executeQuery(QUERY_3);
@@ -118,7 +119,7 @@ public class DBDriver {
 					ret.append(rs.getString("name") + "<br />");
 					counter++;
 				}
-				ret.append("There are " + counter + " records in the results.<br />");
+				ret.append("<br />There are " + counter + " records in the results.<br />");
 				break;
 			case 4:
 				rs = stmt.executeQuery(QUERY_4); 
@@ -127,7 +128,7 @@ public class DBDriver {
 					ret.append(rs.getString("from_name") + " is more skilled than " + rs.getString("to_name") + "<br />");
 					counter++;
 				}
-				ret.append("There are " + counter + " records in the results.<br />");
+				ret.append("<br />There are " + counter + " records in the results.<br />");
 				break;
 			case 5:
 				rs = stmt.executeQuery(QUERY_5);
@@ -136,7 +137,7 @@ public class DBDriver {
 					ret.append(rs.getString("from_name") + " is more certified than " + rs.getString("to_name") + "<br />");
 					counter++;
 				}
-				ret.append("There are " + counter + " records in the results.<br />");
+				ret.append("<br />There are " + counter + " records in the results.<br />");
 				break;
 			case 6:
 				rs = stmt.executeQuery(QUERY_6);
@@ -145,7 +146,7 @@ public class DBDriver {
 					ret.append(rs.getString("from_name") + " indirectly endorses " + rs.getString("to_name") + "<br />");
 					counter++;
 				}
-				ret.append("There are " + counter + " records in the results.<br />");
+				ret.append("<br />There are " + counter + " records in the results.<br />");
 				break;
 			case 7:
 				rs = stmt.executeQuery(QUERY_7); 
@@ -155,7 +156,7 @@ public class DBDriver {
 							+ "indirectly endorses " + rs.getString("to_name") + "<br />");
 					counter++;
 				}
-				ret.append("There are " + counter + " records in the results.<br />");
+				ret.append("<br />There are " + counter + " records in the results.<br />");
 				break;	
 			}
 		} catch (SQLException e) {
