@@ -1,0 +1,13 @@
+.container-fluid {
+	margin-top: 41px;
+}
+
+.field-row {
+	clear: both;
+}
+
+body {
+	font: 16px 'Open Sans', "Helvetica Neue", Helvetica, Arial,
+		"Lucida Grande", sans-serif;
+	background: #ccc;
+}
