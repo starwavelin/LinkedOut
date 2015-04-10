@@ -7,7 +7,11 @@ Now, I am rewriting this project all myself using PostgreSQL 9.3 and Eclipse EE 
 library used: postgresql-9.3-1100.jdbc4.jar
 
 Configure this project:
+
 Step 1: Make sure you have PostgreSQL (prefer version 9.3 or above), Eclipse EE, Apache Tomcat (prefer version 7) installed on your machine; Eclipse EE is successfully configured with Apache Tomcat.
+
 Step 2: Create a DB named "loDB" (linkedout database) under a DB user. For example, I use DB user "postgres". Then, issue command $ psql -U postgres -d loDB -h 127.0.0.1 -p 5432; after entering the password for user "postgres", you have entered the postgres command line loDB=#
+
 Step 3: In the command line loDB=#, Run the "linkedout.sql" script in DB folder to setup the database for this project; other scripts in this DB folder are for you to check the answers to the 7 questions in the project proposal. Moreover, the Question #2 is not fully implemented by q2.sql; the program uses q2.sql and src/com/starwavelin/DB/DBQ2Help.java to resolve it. 
+
 Step 4: Run this project in Eclipse using your local Apache Tomcat server. That's it. 
