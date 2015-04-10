@@ -6,7 +6,7 @@ Now, I am rewriting this project all myself using PostgreSQL 9.3 and Eclipse EE 
 
 library used: postgresql-9.3-1100.jdbc4.jar
 
-Configure this project:
+###Configure this project:
 
 Step 1: Make sure you have PostgreSQL (prefer version 9.3 or above), Eclipse EE, Apache Tomcat (prefer version 7) installed on your machine; Eclipse EE is successfully configured with Apache Tomcat.
 
