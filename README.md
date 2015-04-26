@@ -15,3 +15,7 @@ Step 2: Create a DB named "loDB" (linkedout database) under a DB user. For examp
 Step 3: In the command line loDB=#, Run the "linkedout.sql" script in DB folder to setup the database for this project; other scripts in this DB folder are for you to check the answers to the 7 questions in the project proposal. Moreover, the Question #2 is not fully implemented by q2.sql; the program uses q2.sql and src/com/starwavelin/DB/DBQ2Help.java to resolve it. 
 
 Step 4: Run this project in Eclipse using your local Apache Tomcat server. That's it. 
+
+#####Difficulty and Resolution
+A brief description of difficulties and resolutions I encountered when doing this project can be found <a href="https://starwavelin.wordpress.com/2015/04/17/project-linkedout/" target=
+"_blank">here</a>.
