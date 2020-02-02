@@ -6,7 +6,7 @@ Now, I am rewriting this project all myself using PostgreSQL 9.3 and Eclipse EE 
 
 library used: postgresql-9.3-1100.jdbc4.jar
 
-###Configure this project:
+### Configure this project:
 
 Step 1: Make sure you have PostgreSQL (prefer version 9.3 or above), Eclipse EE, Apache Tomcat (prefer version 7) installed on your machine; Eclipse EE is successfully configured with Apache Tomcat.
 
@@ -16,6 +16,6 @@ Step 3: In the command line loDB=#, Run the "linkedout.sql" script in DB folder 
 
 Step 4: Run this project in Eclipse using your local Apache Tomcat server. That's it. 
 
-#####Difficulty and Resolution
+##### Difficulty and Resolution
 A brief description of difficulties and resolutions I encountered when doing this project can be found <a href="https://starwavelin.wordpress.com/2015/04/17/project-linkedout/" target=
 "_blank">here</a>.
